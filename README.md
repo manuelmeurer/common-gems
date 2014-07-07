@@ -1,3 +1,3 @@
 # Common gems
 
-Just some gems I use in every project.
+Just some common gems I use in every project.
