@@ -16,3 +16,7 @@ group :development, :test do
   gem 'spring',                       '~> 1.1'
   gem 'spring-commands-rspec',        '~> 1.0'
 end
+
+group :production do
+  gem 'puma',                         '~> 2.8', require: false
+end
