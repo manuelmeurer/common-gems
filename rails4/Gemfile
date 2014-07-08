@@ -1,1 +1,2 @@
 gem 'redis-rails',                    '~> 4.0'
+gem 'postgres_ext',                   '~> 2.2'
