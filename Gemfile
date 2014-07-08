@@ -5,6 +5,7 @@ gem 'log_buddy',                      '~> 0.7',  require: false
 gem 'airbrake',                       '~> 4.0'
 gem 'nifty_settings',                 '~> 1.1'
 gem 'newrelic_rpm',                   '~> 3.9'
+gem 'tries',                          '~> 0.3'
 
 # Redis
 gem 'redis',                          '~> 3.1'
