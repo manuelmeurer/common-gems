@@ -1,8 +1,10 @@
+# Utils
 gem 'pry',                            '~> 0.10', require: false
 gem 'awesome_print',                  '~> 1.2',  require: false
 gem 'log_buddy',                      '~> 0.7',  require: false
 gem 'airbrake',                       '~> 4.0'
 gem 'nifty_settings',                 '~> 1.1'
+gem 'newrelic_rpm',                   '~> 3.9'
 
 # Redis
 gem 'redis',                          '~> 3.1'
