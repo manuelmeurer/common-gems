@@ -7,6 +7,9 @@ gem 'nifty_settings',                 '~> 1.1'
 gem 'newrelic_rpm',                   '~> 3.9'
 gem 'tries',                          '~> 0.3'
 
+# Postgres
+gem 'pg',                             '~> 0.17'
+
 # Redis
 gem 'redis',                          '~> 3.1'
 gem 'redis-namespace',                '~> 1.5'
