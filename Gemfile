@@ -4,6 +4,12 @@ gem 'log_buddy',                      '~> 0.7',  require: false
 gem 'airbrake',                       '~> 4.0'
 gem 'nifty_settings',                 '~> 1.1'
 
+# Redis
+gem 'redis',                          '~> 3.1'
+gem 'redis-namespace',                '~> 1.5'
+gem 'connection_pool',                '~> 2.0'
+gem 'redis-rack-cache',               '~> 1.2'
+
 group :development do
   gem 'quiet_assets',                 '~> 1.0'
   gem 'annotate',                     '~> 2.6', require: false
@@ -16,6 +22,7 @@ end
 group :development, :test do
   gem 'spring',                       '~> 1.1'
   gem 'spring-commands-rspec',        '~> 1.0'
+  gem 'fakeredis',                    '~> 0.5'
 end
 
 group :production do
