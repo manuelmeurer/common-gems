@@ -7,6 +7,9 @@ gem 'nifty_settings',                 '~> 1.1'
 gem 'newrelic_rpm',                   '~> 3.9'
 gem 'tries',                          '~> 0.3'
 
+# Services
+gem 'services',                       '~> 0.1'
+
 # Postgres
 gem 'pg',                             '~> 0.17'
 
