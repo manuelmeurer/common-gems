@@ -7,6 +7,7 @@ gem 'nifty_settings',                 '~> 1.1'
 gem 'newrelic_rpm',                   '~> 3.9'
 gem 'tries',                          '~> 0.3'
 gem 'rack-mini-profiler',             '~> 0.9'
+gem 'whenever',                       '~> 0.9', require: false
 
 # Services
 gem 'services',                       '~> 0.1'
