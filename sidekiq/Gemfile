@@ -1,3 +1,4 @@
 gem 'sidekiq',                        '~> 3.2'
+gem 'sidekiq-failures',               '~> 0.4'
 gem 'sidetiq',                        '~> 0.6' # TODO: When updating this, is monkeypatching in config/initializers/sidetiq.rb still necessary?
 gem 'sinatra',                        '~> 1.4', require: false # For Sidekiq Web
