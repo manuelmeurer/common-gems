@@ -1,3 +1,8 @@
+rails = dependencies.detect { |dependency| dependency.name == 'rails' }
+raise 'Rails dependency not found, please define before loading common gems.' if rails.nil?
+@rails_major_version = rails.requirement.to_s[/\d/, 0].to_i
+raise "Could not determine Rails dependency requirement, expected major version 3 or 4 but got #{@rails_major_version}" unless [3, 4].include?(@rails_major_version)
+
 # Utils
 gem 'pry',                            '~> 0.10', require: false
 gem 'awesome_print',                  '~> 1.2',  require: false
@@ -14,12 +19,6 @@ gem 'services',                       '~> 0.1'
 
 # Postgres
 gem 'pg',                             '~> 0.17'
-
-# Redis
-gem 'redis',                          '~> 3.1'
-gem 'redis-namespace',                '~> 1.5'
-gem 'connection_pool',                '~> 2.0'
-gem 'redis-rack-cache',               '~> 1.2'
 
 group :development do
   gem 'quiet_assets',                 '~> 1.0'

@@ -13,7 +13,13 @@ git submodule add https://github.com/krautcomputing/common-gems.git
 then add this to your project's Gemfile:
 
 ```ruby
-['common-gems/Gemfile', 'common-gems/rails3/Gemfile'].each do |gemfile|
+%w(
+  common-gems/Gemfile
+  common-gems/redis/Gemfile         # optional
+  common-gems/sidekiq/Gemfile       # optional
+).each do |gemfile|
   instance_eval(File.read(gemfile))
 end
 ```
+
+Make sure to require `rails` before the common gems since some common gem versions depend on the required Rails version.
