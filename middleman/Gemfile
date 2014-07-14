@@ -1,3 +1,4 @@
 gem 'middleman',                    '~> 3.3'
 gem 'middleman-s3_sync',            '~> 3.0'
 gem 'middleman-cloudfront',         '~> 0.0'
+gem 'builder',                      '~> 3.2'
