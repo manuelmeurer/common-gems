@@ -3,6 +3,14 @@ raise 'Rails dependency not found, please define before loading common gems.' if
 @rails_major_version = rails.requirement.to_s[/\d/, 0].to_i
 raise "Could not determine Rails dependency requirement, expected major version 3 or 4 but got #{@rails_major_version}" unless [3, 4].include?(@rails_major_version)
 
+# Basics
+gem 'haml-rails',                     @rails_major_version == 3 ? '~> 0.4.0' : '~> 0.5'
+gem 'sass-rails',                     @rails_major_version == 3 ? '~> 3.2'   : { github: 'rails/sass-rails' } # TODO: Use this for Rails 4 when sass-rails > 4.0.3 supports sass 3.3: '~> 4.0'
+gem 'coffee-rails',                   @rails_major_version == 3 ? '~> 3.2'   : '~> 4.0'
+gem 'uglifier',                       '~> 2.5'
+gem 'jquery-rails',                   '~> 3.1'
+gem 'compass-rails',                  '~> 2.0'
+
 # Utils
 gem 'pry',                            '~> 0.10', require: false
 gem 'awesome_print',                  '~> 1.2',  require: false
@@ -13,6 +21,7 @@ gem 'newrelic_rpm',                   '~> 3.9'
 gem 'tries',                          '~> 0.3'
 gem 'rack-mini-profiler',             '~> 0.9'
 gem 'whenever',                       '~> 0.9', require: false
+gem 'oj',                             '~> 2.9'
 
 # Services
 gem 'services',                       '~> 0.1'
