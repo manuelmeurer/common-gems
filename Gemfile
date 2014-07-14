@@ -21,6 +21,8 @@ gem 'services',                       '~> 0.1'
 gem 'pg',                             '~> 0.17'
 
 group :development do
+  gem 'bullet',                       '~> 4.12'
+  gem 'letter_opener',                '~> 1.2'
   gem 'quiet_assets',                 '~> 1.0'
   gem 'annotate',                     '~> 2.6', require: false
   gem 'better_errors',                '~> 1.1'
