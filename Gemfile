@@ -22,6 +22,7 @@ gem 'tries',                          '~> 0.3'
 gem 'rack-mini-profiler',             '~> 0.9'
 gem 'whenever',                       '~> 0.9', require: false
 gem 'oj',                             '~> 2.9'
+gem 'squeel',                         '~> 1.2'
 
 # Services
 gem 'services',                       '~> 0.1'
