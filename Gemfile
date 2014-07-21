@@ -28,6 +28,7 @@ gem 'services',                       '~> 0.1'
 
 # Postgres
 gem 'pg',                             '~> 0.17'
+gem 'postgres_ext',                   @rails_major_version == 3 ? '~> 1.0' : '~> 2.3'
 
 group :development do
   gem 'bullet',                       '~> 4.12'
