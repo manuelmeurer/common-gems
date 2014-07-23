@@ -1,7 +1,7 @@
 rails = dependencies.detect { |dependency| dependency.name == 'rails' }
 raise 'Rails dependency not found, please define before loading common gems.' if rails.nil?
 @rails_major_version, @rails_minor_version = rails.requirement.to_s.scan(/\d+/).take(2).map(&:to_i)
-raise "Could not determine Rails major and/or minor version, expected both to be present and major version 3 or 4 but got: major version: #{@rails_major_version}, minor version: #{@rails_minor_version}" unless @rails_major_version.present? && @rails_minor_version.present? && [3, 4].include?(@rails_major_version)
+raise "Could not determine Rails major and/or minor version, expected both to be present and major version 3 or 4 but got: major version: #{@rails_major_version}, minor version: #{@rails_minor_version}" if @rails_major_version.nil? || @rails_minor_version.nil? || ![3, 4].include?(@rails_major_version)
 
 # Basics
 gem 'haml-rails',                     @rails_major_version == 3 ? '~> 0.4.0' : '~> 0.5'
