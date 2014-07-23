@@ -22,6 +22,7 @@ gem 'tries',                          '~> 0.3'
 gem 'rack-mini-profiler',             '~> 0.9'
 gem 'whenever',                       '~> 0.9', require: false
 gem 'oj',                             '~> 2.9'
+gem 'oj_mimic_json',                  '~> 1.0' if @rails_major_version == 4 && @rails_minor_version > 0
 gem 'squeel',                         '~> 1.2'
 
 # Services
