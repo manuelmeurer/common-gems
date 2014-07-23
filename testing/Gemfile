@@ -1,0 +1,12 @@
+group :test do
+  gem 'factory_girl_rails',             '~> 4.4'
+  gem 'ffaker',                         '~> 1.24'
+  gem 'rspec-rails',                    '~> 3.0'
+  gem 'capybara',                       '~> 2.4'
+  gem 'timecop',                        '~> 0.7'
+  gem 'guard-rspec',                    '~> 4.2', require: false
+  gem 'database_rewinder',              '~> 0.2'
+  gem 'vcr',                            '~> 2.9'
+  gem 'webmock',                        '~> 1.18'
+  gem 'simplecov',                      '~> 0.9', require: false
+end
