@@ -45,7 +45,7 @@ end
 group :development, :test do
   gem 'spring',                       '~> 1.1'
   gem 'spring-commands-rspec',        '~> 1.0'
-  gem 'fakeredis',                    '~> 0.5'
+  gem 'fakeredis',                    '~> 0.5', require: false
 end
 
 group :production do
