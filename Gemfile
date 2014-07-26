@@ -19,7 +19,7 @@ gem 'airbrake',                       '~> 4.0'
 gem 'nifty_settings',                 '~> 1.1'
 gem 'newrelic_rpm',                   '~> 3.9'
 gem 'tries',                          '~> 0.3'
-gem 'rack-mini-profiler',             '~> 0.9'
+gem 'rack-mini-profiler',             '~> 0.9', require: false
 gem 'whenever',                       '~> 0.9', require: false
 gem 'squeel',                         '~> 1.2'
 
