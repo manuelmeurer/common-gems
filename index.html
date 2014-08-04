@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Common-gems by krautcomputing</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Common-gems</h1>
+        <p>Just some common gems I use in every Ruby project.</p>
+
+        <p class="view"><a href="https://github.com/krautcomputing/common-gems">View the Project on GitHub <small>krautcomputing/common-gems</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/krautcomputing/common-gems/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/krautcomputing/common-gems/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/krautcomputing/common-gems">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="common-gems" class="anchor" href="#common-gems"><span class="octicon octicon-link"></span></a>Common gems</h1>
+
+<p>Just some common gems I use in every Ruby project.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>First add common-gems as a Git submodule to your project:</p>
+
+<pre><code>git submodule add https://github.com/krautcomputing/common-gems.git
+</code></pre>
+
+<p>then you can load the included Gemfiles.</p>
+
+<h3>
+<a name="rails" class="anchor" href="#rails"><span class="octicon octicon-link"></span></a>Rails</h3>
+
+<p>For a Rails project add this to your project's Gemfile:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="sx">%w(</span>
+<span class="sx">  common-gems/rails/Gemfile</span>
+<span class="sx">  common-gems/redis/Gemfile         # optional</span>
+<span class="sx">  common-gems/sidekiq/Gemfile       # optional</span>
+<span class="sx">  common-gems/testing/Gemfile       # optional</span>
+<span class="sx">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gemfile</span><span class="o">|</span>
+  <span class="nb">instance_eval</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">gemfile</span><span class="p">))</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>Make sure to define the <code>rails</code> dependency in the Gemfile <strong>before</strong> the common gems Gemfiles since some common gem versions depend on the required Rails version.</p>
+
+<h3>
+<a name="middleman" class="anchor" href="#middleman"><span class="octicon octicon-link"></span></a>Middleman</h3>
+
+<p>For a <a href="http://middlemanapp.com/">Middleman</a> project add this to your Gemfile:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="nb">instance_eval</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">'common-gems/middleman/Gemfile'</span><span class="p">))</span>
+</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/krautcomputing">krautcomputing</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
