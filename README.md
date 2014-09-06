@@ -18,12 +18,12 @@ For a Rails project add this to your project's Gemfile:
 
 ```ruby
 %w(
-  common-gems/rails/Gemfile
-  common-gems/redis/Gemfile         # optional
-  common-gems/sidekiq/Gemfile       # optional
-  common-gems/testing/Gemfile       # optional
-).each do |gemfile|
-  instance_eval(File.read(gemfile))
+  rails
+  redis         # optional
+  sidekiq       # optional
+  testing       # optional
+).each do |module|
+  instance_eval(File.read(File.join('common-gems', module, 'Gemfile'))
 end
 ```
 
