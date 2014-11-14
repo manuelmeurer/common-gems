@@ -25,7 +25,7 @@ gem 'squeel',                         '~> 1.2'
 gem 'autoprefixer-rails',             '~> 3.1'
 
 # Services
-gem 'services',                       '~> 0.1'
+gem 'services',                       '~> 1.0'
 
 # Postgres
 gem 'pg',                             '~> 0.17'
