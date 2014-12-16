@@ -6,4 +6,7 @@ gem 'middleman-cloudfront',         '~> 0.1'
 gem 'middleman-cdn',                '~> 0.1'
 gem 'middleman-autoprefixer',       '~> 2.3'
 gem 'middleman-bootstrap-navbar',   '~> 2.0'
+gem 'middleman-blog',               '~> 3.5'
+gem 'middleman-syntax',             '~> 2.0'
 gem 'bootstrap-sass',               '~> 3.2', require: false
+gem 'redcarpet',                    '~> 3.2'
