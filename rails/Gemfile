@@ -5,7 +5,7 @@ raise "Could not determine Rails major and/or minor version, expected both to be
 
 # Basics
 gem 'haml-rails',                     @rails_major_version == 3 ? '~> 0.4.0' : '~> 0.5'
-gem 'sass-rails',                     @rails_major_version == 3 ? '~> 3.2'   : '~> 5.0.0.beta1' # TODO: Use ~> 5.0 for Rails 4 when > 5.0.0 released (5.0.0 causes problems)
+gem 'sass-rails',                     @rails_major_version == 3 ? '~> 3.2'   : '5.0.0.beta1' # TODO: Use ~> 5.0 for Rails 4 when > 5.0.0 released (5.0.0 causes problems)
 gem 'coffee-rails',                   @rails_major_version == 3 ? '~> 3.2'   : '~> 4.0'
 gem 'uglifier',                       '~> 2.5'
 gem 'jquery-rails',                   '~> 3.1'
