@@ -25,7 +25,7 @@ gem 'autoprefixer-rails',             '~> 3.1'
 gem 'rollbar',                        '~> 1.2'
 
 # Services
-gem 'services',                       '~> 2.0'
+gem 'services',                       '~> 3.0'
 
 # Postgres
 gem 'pg',                             '~> 0.17'
