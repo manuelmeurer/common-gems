@@ -23,6 +23,7 @@ gem 'whenever',                       '~> 0.9', require: false
 gem 'squeel',                         '~> 1.2'
 gem 'autoprefixer-rails',             '~> 3.1'
 gem 'rollbar',                        '~> 1.2'
+gem 'email_prefixer',                 '~> 1.0'
 
 # Services
 gem 'services',                       '~> 3.0'
