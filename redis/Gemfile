@@ -3,4 +3,4 @@ gem 'redis-namespace',                '~> 1.5'
 gem 'connection_pool',                '~> 2.0'
 gem 'redis-rack-cache',               '~> 1.2'
 gem 'redis-rails',                    @rails_major_version == 3 ? '~> 3.2' : '~> 4.0' if defined?(@rails_major_version)
-gem 'redis_hash_store',               '~> 0.1'
+gem 'redis_hash_store',               '~> 0.0'
