@@ -1,0 +1,8 @@
+group :development, :test do
+  gem 'minitest-rails',           '~> 2.1'
+  gem 'minitest-rails-capybara',  '~> 2.1'
+end
+
+group :development do
+  gem 'guard-minitest',           '~> 2.4'
+end
