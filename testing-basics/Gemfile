@@ -7,5 +7,4 @@ group :test do
   gem 'vcr',                '~> 2.9'
   gem 'webmock',            '~> 1.18'
   gem 'simplecov',          '~> 0.9', require: false
-  gem 'fakeredis',          '~> 0.5', require: false
 end
