@@ -6,60 +6,56 @@ if [@rails_major_version, @rails_minor_version].include?(nil) || ![3, 4].include
 end
 
 # Basics
-gem 'haml-rails',                            @rails_major_version == 3 ? '~> 0.4.0' : '~> 0.5'
-gem 'sass-rails',                            @rails_major_version == 3 ? '~> 3.2'   : '~> 5.0'
-gem 'coffee-rails',                          @rails_major_version == 3 ? '~> 3.2'   : '~> 4.0'
-gem 'uglifier',                              '~> 2.5'
-gem 'jquery-rails',                          '~> 3.1'
-gem 'compass-rails',                         '~> 2.0'
+gem 'haml-rails',                     @rails_major_version == 3 ? '~> 0.4.0' : '~> 0.5'
+gem 'sass-rails',                     @rails_major_version == 3 ? '~> 3.2'   : '~> 5.0'
+gem 'coffee-rails',                   @rails_major_version == 3 ? '~> 3.2'   : '~> 4.0'
+gem 'uglifier',                       '~> 2.5'
+gem 'jquery-rails',                   '~> 3.1'
+gem 'compass-rails',                  '~> 2.0'
 
 # Utils
-gem 'pry',                                   '~> 0.10', require: false
-gem 'awesome_print',                         '~> 1.2',  require: false
-gem 'log_buddy',                             '~> 0.7',  require: false
-gem 'nifty_settings',                        '~> 2.0'
-gem 'newrelic_rpm',                          '~> 3.9'
-gem 'tries',                                 '~> 0.3'
-gem 'rack-mini-profiler',                    '~> 0.9', require: false
-gem 'whenever',                              '~> 0.9', require: false
-gem 'squeel',                                '~> 1.2'
-gem 'autoprefixer-rails',                    '~> 5.1'
-gem 'rollbar',                               '~> 1.2'
-gem 'email_prefixer',                        '~> 1.0' if @rails_major_version == 4 && @rails_minor_version > 0
-gem 'fakeredis',                             '~> 0.5', require: false
-
-if @rails_major_version < 5
-  gem 'activerecord-colored_log_subscriber', '~> 0.1'
-end
+gem 'pry',                            '~> 0.10', require: false
+gem 'awesome_print',                  '~> 1.2',  require: false
+gem 'log_buddy',                      '~> 0.7',  require: false
+gem 'nifty_settings',                 '~> 2.0'
+gem 'newrelic_rpm',                   '~> 3.9'
+gem 'tries',                          '~> 0.3'
+gem 'rack-mini-profiler',             '~> 0.9', require: false
+gem 'whenever',                       '~> 0.9', require: false
+gem 'squeel',                         '~> 1.2'
+gem 'autoprefixer-rails',             '~> 5.1'
+gem 'rollbar',                        '~> 1.2'
+gem 'email_prefixer',                 '~> 1.0' if @rails_major_version == 4 && @rails_minor_version > 0
+gem 'fakeredis',                      '~> 0.5', require: false
 
 # Services
-gem 'services',                              '~> 4.0'
+gem 'services',                       '~> 4.0'
 
 # Postgres
-gem 'pg',                                    '~> 0.18'
-gem 'postgres_ext',                          @rails_major_version == 3 ? '~> 1.0' : '~> 2.3'
+gem 'pg',                             '~> 0.18'
+gem 'postgres_ext',                   @rails_major_version == 3 ? '~> 1.0' : '~> 2.3'
 
 if @rails_major_version == 4 && @rails_minor_version > 1
-  gem 'schema_plus_indexes',                 '~> 0.2'
+  gem 'schema_plus_indexes',          '~> 0.2'
 else
-  gem 'schema_plus',                         '~> 1.8'
+  gem 'schema_plus',                  '~> 1.8'
 end
 
 group :development do
-  gem 'bullet',                              '~> 4.12'
-  gem 'letter_opener',                       '~> 1.2'
-  gem 'quiet_assets',                        '~> 1.0'
-  gem 'annotate',                            '~> 2.6', require: false
-  gem 'better_errors',                       '~> 2.0'
-  gem 'binding_of_caller',                   '~> 0.7'
-  gem 'pry-remote',                          '~> 0.1'
-  gem 'pry-byebug',                          '~> 3.0'
-  gem 'derailed_benchmarks',                 '~> 0.0'
-  gem 'spring',                              '~> 1.1'
-  gem 'guard',                               '~> 2.12'
+  gem 'bullet',                       '~> 4.12'
+  gem 'letter_opener',                '~> 1.2'
+  gem 'quiet_assets',                 '~> 1.0'
+  gem 'annotate',                     '~> 2.6', require: false
+  gem 'better_errors',                '~> 2.0'
+  gem 'binding_of_caller',            '~> 0.7'
+  gem 'pry-remote',                   '~> 0.1'
+  gem 'pry-byebug',                   '~> 3.0'
+  gem 'derailed_benchmarks',          '~> 0.0'
+  gem 'spring',                       '~> 1.1'
+  gem 'guard',                        '~> 2.12'
 end
 
 group :production do
-  gem 'lograge',                             '~> 0.3'
-  gem 'puma',                                '~> 2.8', require: false
+  gem 'lograge',                      '~> 0.3'
+  gem 'puma',                         '~> 2.8', require: false
 end
