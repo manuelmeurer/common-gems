@@ -1,6 +1,8 @@
-gem 'redis',                          '~> 3.1'
+gem 'hiredis',                        '~> 0.6'
+gem 'redis',                          '~> 3.1', require: %w(redis redis/connection/hiredis)
 gem 'redis-namespace',                '~> 1.5'
 gem 'connection_pool',                '~> 2.0'
 gem 'redis-rack-cache',               '~> 1.2'
+gem 'readthis',                       '~> 1.0'
 gem 'redis-rails',                    @rails_major_version == 3 ? '~> 3.2' : '~> 4.0' if defined?(@rails_major_version)
 gem 'redis_hash_store',               '~> 0.0' if @rails_major_version == 4
