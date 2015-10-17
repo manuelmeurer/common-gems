@@ -28,6 +28,7 @@ gem 'rollbar',                        '~> 2.4'
 gem 'email_prefixer',                 '~> 1.0' if @rails_major_version == 4 && @rails_minor_version > 0
 gem 'fakeredis',                      '~> 0.5', require: false
 gem 'premailer-rails',                '~> 1.8'
+gem 'nokogiri',                       '~> 1.6'
 
 # Services
 gem 'services',                       '~> 4.0'
