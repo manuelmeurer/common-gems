@@ -50,7 +50,8 @@ group :development do
   gem 'better_errors',                '~> 2.0'
   gem 'binding_of_caller',            '~> 0.7'
   gem 'pry-remote',                   '~> 0.1'
-  gem 'pry-byebug',                   '~> 3.0'
+  gem 'pry-byebug',                   '~> 1.3' # Don't use never version, unless it works with with pry-remote:
+                                               # https://github.com/deivid-rodriguez/pry-byebug/issues/33
   gem 'derailed_benchmarks',          '~> 0.0'
   gem 'spring',                       '~> 1.1'
   gem 'guard',                        '~> 2.12'
