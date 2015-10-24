@@ -28,6 +28,7 @@ gem 'rollbar',                        '~> 2.4'
 gem 'fakeredis',                      '~> 0.5', require: false
 gem 'premailer-rails',                '~> 1.8'
 gem 'nokogiri',                       '~> 1.6'
+gem 'has_defaults',                   '~> 0.4'
 
 # Services
 gem 'services',                       '~> 4.0'
