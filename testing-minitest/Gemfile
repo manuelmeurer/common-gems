@@ -2,6 +2,7 @@ group :development, :test do
   gem 'minitest-rails',           '~> 2.1'
   gem 'minitest-reporters',       '~> 1.0'
   gem 'minitest-rails-capybara',  '~> 2.1'
+  gem 'minitest-focus',           '~> 1.1'
 end
 
 group :development do
