@@ -6,7 +6,11 @@ gem 'middleman-cloudfront',         '~> 0.1'
 gem 'middleman-cdn',                '~> 0.1'
 gem 'middleman-autoprefixer',       '~> 2.3'
 gem 'middleman-bootstrap-navbar',   '~> 2.0'
-gem 'middleman-blog',               '~> 3.5'
+
+# TODO: Use '~> 3.5' when my PR is accepted and backported
+# https://github.com/middleman/middleman-blog/pull/273
+gem 'middleman-blog',               github: 'krautcomputing/middleman-blog', branch: 'fix_article_summaries_v3'
+
 gem 'middleman-syntax',             '~> 2.0'
 gem 'middleman-livereload',         '~> 3.4'
 gem 'middleman-sitemap-ping',       '~> 0.0'
