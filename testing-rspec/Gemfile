@@ -4,5 +4,4 @@ end
 
 group :development do
   gem 'guard-rspec',            '~> 4.2', require: false
-  gem 'spring-commands-rspec',  '~> 1.0'
 end

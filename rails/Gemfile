@@ -58,7 +58,6 @@ group :development do
   gem 'binding_of_caller',            '~> 0.7'
   gem 'pry-remote',                   '~> 0.1'
   gem 'derailed_benchmarks',          '~> 0.0'
-  gem 'spring',                       '~> 1.1'
   gem 'guard',                        '~> 2.12'
 end
 
