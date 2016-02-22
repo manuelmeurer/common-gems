@@ -14,8 +14,7 @@ gem 'jquery-rails',                   '~> 3.1'
 
 # Utils
 gem 'pry',                            '~> 0.10', require: false
-gem 'awesome_print',                  '~> 1.2',  require: false
-gem 'log_buddy',                      '~> 0.7',  require: false
+gem 'awesome_print',                  '~> 1.6',  require: false
 gem 'nifty_settings',                 '~> 2.0'
 gem 'newrelic_rpm',                   '~> 3.9'
 gem 'tries',                          '~> 0.3'
