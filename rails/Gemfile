@@ -27,7 +27,7 @@ gem 'fakeredis',                      '~> 0.5', require: false
 gem 'premailer-rails',                '~> 1.8'
 gem 'nokogiri',                       '~> 1.6'
 gem 'has_defaults',                   '~> 0.4'
-gem 'fetchy',                         '~> 0.1.0.alpha8', require: false # TODO: Upgrade to never version when released.
+gem 'fetchy',                         '~> 0.1.0.alpha9', require: false # TODO: Upgrade to never version when released.
 gem 'fast_blank',                     '~> 1.0'
 
 # Services
