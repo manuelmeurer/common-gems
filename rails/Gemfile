@@ -8,7 +8,11 @@ end
 
 # Basics
 gem 'haml-rails',                     @rails_major_version == 3 ? '~> 0.4.0' : '~> 0.5'
-gem 'sass-rails',                     @rails_major_version == 3 ? '~> 3.2'   : '~> 5.0'
+gem 'sass-rails',                     case @rails_major_version
+                                      when 3 then '~> 3.2'
+                                      when 4 then '~> 5.0'
+                                      else        '>= 6.0.0.beta1' # TODO: Use '~> 6.0' when 6.0 is released.
+                                      end
 gem 'coffee-rails',                   @rails_major_version == 3 ? '~> 3.2'   : '~> 4.0'
 gem 'uglifier',                       '~> 2.5'
 gem 'jquery-rails',                   '~> 3.1'
