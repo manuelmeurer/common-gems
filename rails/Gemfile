@@ -29,7 +29,7 @@ gem 'autoprefixer-rails',                   '~> 6.3'
 gem 'rollbar',                              '~> 2.4'
 gem 'fakeredis',                            '~> 0.5', require: false
 gem 'premailer-rails',                      '~> 1.8'
-gem 'nokogiri',                             '~> 1.6', '>= 1.6.8.rc3', require: false # TODO: Remove this once version >= 1.6.8 is released.
+gem 'nokogiri',                             '~> 1.6'
 gem 'has_defaults',                         '~> 0.4'
 gem 'fetchy',                               '~> 0.1.0.alpha11', require: false # TODO: Upgrade to never version when released.
 gem 'fast_blank',                           '~> 1.0'
