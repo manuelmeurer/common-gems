@@ -1,5 +1,9 @@
 group :development, :test do
-  gem 'minitest-rails',           '~> 2.1'
+  gem 'minitest-rails',           case @rails_major_version
+                                  when 3 then '~> 1.0'
+                                  when 4 then (@rails_minor_version == 0 ? '~> 1.0' : '~> 2.0')
+                                  else        '~> 3.0'
+                                  end
   gem 'minitest-reporters',       '~> 1.0'
   gem 'minitest-rails-capybara',  '~> 2.1'
   gem 'minitest-focus',           '~> 1.1'
