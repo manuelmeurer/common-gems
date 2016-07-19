@@ -22,8 +22,8 @@ For a Rails project add this to your project's Gemfile:
   redis         # optional
   sidekiq       # optional
   testing       # optional
-).each do |module|
-  instance_eval(File.read(File.join('common-gems', module, 'Gemfile'))
+).each do |group|
+  instance_eval(File.read(File.join('common-gems', group, 'Gemfile')))
 end
 ```
 
