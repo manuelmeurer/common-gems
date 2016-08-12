@@ -2,9 +2,7 @@ gem 'hiredis',                        '~> 0.6'
 gem 'redis',                          '~> 3.1', require: %w(redis redis/connection/hiredis)
 gem 'redis-namespace',                '~> 1.5'
 gem 'connection_pool',                '~> 2.0'
-gem 'redis-rack-cache',               @rails_major_version >= 5 ? '2.0.0.pre' : '~> 1.2' # TODO: Update to `~> 2.0` once released
-gem 'readthis',                       '~> 1.0'
-gem 'redis-rails',                    "~> #{@rails_major_version}.0"
+gem 'readthis',                       '~> 2.0'
 
 if @rails_major_version == 4
   gem 'redis_hash_store',             '~> 0.0'
