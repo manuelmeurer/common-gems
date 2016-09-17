@@ -1,2 +1,1 @@
-gem 'sidekiq', '~> 4.1'
-gem 'sinatra', '~> 1.4', require: false # For Sidekiq Web
+gem 'sidekiq', '~> 4.2'
