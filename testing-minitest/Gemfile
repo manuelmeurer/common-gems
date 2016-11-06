@@ -8,7 +8,6 @@ group :development, :test do
   gem 'minitest-rails-capybara',  '~> 2.1'
   gem 'minitest-focus',           '~> 1.1'
   gem 'minitest-around',          '~> 0.3'
-  gem 'minitest-assert_changes',  '~> 1.0'
 end
 
 group :development do
