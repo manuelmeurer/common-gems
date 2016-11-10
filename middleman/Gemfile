@@ -11,7 +11,7 @@ gem 'middleman-cdn',                '~> 0.1'
 gem 'middleman-autoprefixer',       '~> 2.7'
 gem 'middleman-bootstrap-navbar',   '~> 3.0'
 gem 'middleman-blog',               @middleman_major_version == 3 ?
-                                    { github: 'middleman/middleman-blog', branch: 'v3-stable' } : # TODO: Use >= 3.6 when released
+                                    { git: 'https://github.com/middleman/middleman-blog.git', branch: 'v3-stable' } : # TODO: Use >= 3.6 when released
                                     '~> 4.0'
 gem 'middleman-livereload',         '~> 3.4'
 gem 'middleman-sitemap-ping',       '~> 0.2'
