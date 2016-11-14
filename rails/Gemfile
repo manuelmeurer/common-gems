@@ -31,7 +31,7 @@ gem 'fetchy',                               '~> 0.1', require: false
 gem 'fast_blank',                           '~> 1.0'
 
 # Services
-gem 'services',                             '~> 4.1'
+gem 'services',                             '~> 5.0'
 
 # Postgres
 gem 'pg',                                   '~> 0.18'
