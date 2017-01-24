@@ -19,11 +19,13 @@ For a Rails project add this to your project's Gemfile:
 ```ruby
 %w(
   rails
-  redis         # optional
-  sidekiq       # optional
-  testing       # optional
+  redis            # optional
+  sidekiq          # optional
+  testing-basics   # optional
+  testing-minitest # optional, requires testing-basics, mutually exclusive with testing-rspec
+  testing-rspec    # optional, requires testing-basics, mutually exclusive with testing-minitest
 ).each do |m|
-  instance_eval(File.read(File.join('common-gems', m, 'Gemfile')))
+  eval_gemfile File.join('common-gems', m, 'Gemfile')
 end
 ```
 
@@ -34,5 +36,5 @@ Make sure to define the `rails` dependency in the Gemfile **before** the common 
 For a [Middleman](http://middlemanapp.com/) project add this to your Gemfile:
 
 ```ruby
-instance_eval(File.read('common-gems/middleman/Gemfile'))
+eval_gemfile 'common-gems/middleman/Gemfile'
 ```
