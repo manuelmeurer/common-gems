@@ -14,7 +14,7 @@ gem 'middleman-blog',               @middleman_major_version == 3 ?
                                     { git: 'https://github.com/middleman/middleman-blog.git', branch: 'v3-stable' } : # TODO: Use >= 3.6 when released
                                     '~> 4.0'
 gem 'middleman-livereload',         '~> 3.4'
-gem 'middleman-sitemap-ping',       '~> 0.2'
+gem 'middleman-sitemap-ping',       @middleman_major_version == 3 ? '~> 0.2' : '~> 1.0'
 gem 'middleman-imageoptim',         '~> 0.2'
 gem 'bootstrap-sass',               '~> 3.3', require: false
 gem 'redcarpet',                    '~> 3.3'
