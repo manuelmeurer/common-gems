@@ -7,7 +7,7 @@ end
 
 gem 'builder',                      '~> 3.2'
 gem 'middleman-s3_sync',            @middleman_major_version == 3 ? '~> 3.3' : '~> 4.0'
-gem 'middleman-cdn',                '~> 0.1'
+gem 'middleman-cdn',                git: 'https://github.com/krautcomputing/middleman-cdn.git', branch: 'middleman4'
 gem 'middleman-autoprefixer',       '~> 2.7'
 gem 'middleman-bootstrap-navbar',   '~> 3.0'
 gem 'middleman-blog',               @middleman_major_version == 3 ?
