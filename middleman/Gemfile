@@ -6,7 +6,9 @@ if [@middleman_major_version, @middleman_minor_version].include?(nil) || ![3, 4]
 end
 
 gem 'builder',                      '~> 3.2'
-gem 'middleman-s3_sync',            @middleman_major_version == 3 ? '~> 3.3' : '~> 4.0'
+gem 'middleman-s3_sync',            @middleman_major_version == 3 ?
+                                    '~> 3.3' :
+                                    { git: 'https://github.com/fredjean/middleman-s3_sync.git' } # TODO: Use >= 4.0.3 when released
 gem 'middleman-cdn',                @middleman_major_version == 3 ?
                                     '~> 0.1' :
                                     { git: 'https://github.com/krautcomputing/middleman-cdn.git', branch: 'middleman4' } # TODO: Use released version when my PR is accepted: https://github.com/leighmcculloch/middleman-cdn/pull/12
