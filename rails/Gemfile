@@ -51,6 +51,7 @@ gem 'postgres_ext',                         @rails_major_version == 3 ? '~> 1.0'
 
 if @rails_major_version <= 4
   gem 'activerecord-collection_cache_key',  '~> 0.1'
+  gem 'where-or',                           '~> 0.1'
 end
 
 if (@rails_major_version == 4 && @rails_minor_version <= 1) || (@rails_major_version == 3 && @rails_minor_version >= 2)
