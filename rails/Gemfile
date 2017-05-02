@@ -41,6 +41,7 @@ gem 'nokogiri',                             '~> 1.6'
 gem 'has_defaults',                         '~> 0.4'
 gem 'fetchy',                               '~> 0.1', require: false
 gem 'fast_blank',                           '~> 1.0'
+gem 'oj',                                   '~> 3.0'
 
 # Services
 gem 'services',                             '~> 5.0'
