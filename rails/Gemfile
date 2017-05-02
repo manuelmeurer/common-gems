@@ -19,7 +19,7 @@ if [@rails_major_version, @rails_minor_version].include?(nil) || !expected_rails
 end
 
 # Basics
-gem 'haml-rails',                           @rails_major_version == 3 ? '~> 0.4.0' : '~> 0.5'
+gem 'haml-rails',                           @rails_major_version == 3 ? '~> 0.4.0' : '~> 1.0'
 gem 'sass-rails',                           @rails_major_version == 3 ? '~> 3.2' : '~> 5.0'
 gem 'coffee-rails',                         @rails_major_version == 3 ? '~> 3.2' : '~> 4.0'
 gem 'uglifier',                             '~> 2.5'
