@@ -1,1 +1,1 @@
-gem 'sidekiq', '~> 4.2'
+gem 'sidekiq', '~> 5.0'
