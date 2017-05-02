@@ -74,6 +74,7 @@ group :development do
   gem 'pry-remote',                         '~> 0.1'
   gem 'derailed_benchmarks',                '~> 0.0'
   gem 'guard',                              '~> 2.12'
+  gem 'marginalia',                         '~> 1.4'
 
   if @rails_major_version < 5
     gem 'quiet_assets',                     '~> 1.0'
