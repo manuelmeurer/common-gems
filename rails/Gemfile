@@ -33,7 +33,7 @@ gem 'newrelic_rpm',                         '~> 3.9'
 gem 'tries',                                '~> 0.3'
 gem 'rack-mini-profiler',                   '~> 0.9', require: false
 gem 'whenever',                             '~> 0.9', require: false
-gem 'autoprefixer-rails',                   '~> 6.3'
+gem 'autoprefixer-rails',                   '~> 7.0'
 gem 'rollbar',                              '~> 2.4'
 gem 'fakeredis',                            '~> 0.5', require: false
 gem 'premailer-rails',                      '~> 1.8'
