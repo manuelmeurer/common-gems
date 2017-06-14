@@ -48,9 +48,9 @@ gem 'services',                             @rails_major_version == 3 ? '~> 4.1.
 
 # Postgres
 gem 'pg',                                   '~> 0.18'
-gem 'postgres_ext',                         @rails_major_version == 3 ? '~> 1.0' : '~> 3.0'
 
 if @rails_major_version <= 4
+  gem 'postgres_ext',                       @rails_major_version == 3 ? '~> 1.0' : '~> 3.0'
   gem 'activerecord-collection_cache_key',  '~> 0.1'
 end
 
