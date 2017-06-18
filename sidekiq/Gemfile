@@ -1,1 +1,2 @@
-gem 'sidekiq', '~> 5.0'
+gem 'sidekiq',          '~> 5.0'
+gem 'sidekiq-failures', '~> 1.0'
