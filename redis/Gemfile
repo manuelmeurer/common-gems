@@ -3,7 +3,3 @@ gem 'redis',                          '~> 3.1', require: %w(redis redis/connecti
 gem 'redis-namespace',                '~> 1.5'
 gem 'connection_pool',                '~> 2.0'
 gem 'readthis',                       '~> 2.0'
-
-if @rails_major_version == 4
-  gem 'redis_hash_store',             '~> 0.0'
-end
