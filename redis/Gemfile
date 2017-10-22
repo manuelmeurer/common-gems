@@ -1,5 +1,5 @@
 gem 'hiredis',                        '~> 0.6'
-gem 'redis',                          '~> 3.1', require: %w(redis redis/connection/hiredis)
+gem 'redis',                          '~> 4.0', require: %w(redis redis/connection/hiredis)
 gem 'redis-namespace',                '~> 1.5'
 gem 'connection_pool',                '~> 2.0'
 gem 'readthis',                       '~> 2.0'
