@@ -38,7 +38,6 @@ gem 'rack-mini-profiler',                   '~> 0.9', require: false
 gem 'whenever',                             '~> 0.9', require: false
 gem 'autoprefixer-rails',                   '~> 7.0'
 gem 'rollbar',                              '~> 2.4'
-gem 'fakeredis',                            '~> 0.5', require: false
 gem 'premailer-rails',                      '~> 1.8'
 gem 'nokogiri',                             '~> 1.6'
 gem 'has_defaults',                         '~> 0.4'
