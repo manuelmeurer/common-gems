@@ -1,6 +1,6 @@
 gem 'hiredis',                        '~> 0.6'
 gem 'redis',                          '~> 4.0', require: %w(redis redis/connection/hiredis)
-gem 'redis-namespace',                git: 'https://github.com/resque/redis-namespace.git' # TODO: Use version > 1.5.3 when released.
+gem 'redis-namespace',                '~> 1.6'
 gem 'connection_pool',                '~> 2.0'
 gem 'readthis',                       '~> 2.0'
 gem 'fakeredis',                      git: 'https://github.com/guilleiguaran/fakeredis.git', require: false # TODO: Use version > 0.6.0 when released.
