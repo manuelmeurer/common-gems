@@ -19,7 +19,7 @@ gem 'middleman-livereload',         '~> 3.4'
 gem 'middleman-sitemap-ping',       @middleman_major_version == 3 ? '~> 0.2' : '~> 1.0'
 gem 'middleman-imageoptim',         @middleman_major_version == 3 ?
                                     '~> 0.2' :
-                                    { git: 'https://github.com/plasticine/middleman-imageoptim.git' } # TODO: Use >= 0.2.1 when released
+                                    { git: 'https://github.com/plasticine/middleman-imageoptim.git' } # TODO: Use > 0.2.1 when released
 gem 'bootstrap-sass',               '~> 3.3', require: false
 gem 'redcarpet',                    '~> 3.3'
 
