@@ -54,7 +54,7 @@ if @rails_major_version >= 4
 end
 
 # Services
-gem 'services',                             @rails_major_version == 3 ? '~> 4.1.4' : '~> 5.0'
+gem 'services',                             @rails_major_version == 3 ? '~> 4.1.4' : '~> 6.0'
 
 # Postgres
 gem 'pg',                                   @rails_major_version <= 4 ? '~> 0.20.0' : '~> 0.21' # v0.21 shows annoying deprecation warnings in Rails <= 4
