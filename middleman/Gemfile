@@ -22,6 +22,7 @@ gem 'middleman-imageoptim',         @middleman_major_version == 3 ?
                                     { git: 'https://github.com/plasticine/middleman-imageoptim.git' } # TODO: Use > 0.2.1 when released
 gem 'bootstrap-sass',               '~> 3.3', require: false
 gem 'redcarpet',                    '~> 3.3'
+gem 'turbolinks',                   '~> 5.1', require: false
 
 if @middleman_major_version == 4
   gem 'middleman-sprockets',        '~> 4.1'
