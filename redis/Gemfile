@@ -3,4 +3,4 @@ gem 'redis',                          '~> 4.0', require: %w(redis redis/connecti
 gem 'redis-namespace',                '~> 1.6'
 gem 'connection_pool',                '~> 2.0'
 gem 'readthis',                       '~> 2.0'
-gem 'fakeredis',                      '~> 0.7'
+gem 'fakeredis',                      '~> 0.7', require: false
