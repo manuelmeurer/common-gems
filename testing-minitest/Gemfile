@@ -6,7 +6,7 @@ group :development, :test do
                                     end
   gem 'minitest-reporters',         '~> 1.0'
   if @rails_major_version >= 4
-    gem 'minitest-rails-capybara',  @rails_major_version == 4 ? '~> 2.0' : '~> 3.0'
+    gem 'minitest-rails-capybara',  @rails_major_version == 4 ? { git: 'https://github.com/krautcomputing/minitest-rails-capybara.git', branch: '2.x_with_capybara_3' } : '~> 3.0'
   end
   gem 'minitest-focus',             '~> 1.1'
   gem 'minitest-around',            '~> 0.3'
