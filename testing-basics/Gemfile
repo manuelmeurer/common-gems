@@ -1,7 +1,7 @@
 group :test do
   gem 'factory_bot_rails',  '~> 4.8'
   gem 'ffaker',             '~> 2.0'
-  gem 'capybara',           '~> 3.0'
+  gem 'capybara',           '~> 3.0' unless IGNORE_COMMON_GEMS.include?('capybara')
   gem 'timecop',            '~> 0.7'
   gem 'database_rewinder',  '~> 0.2'
   gem 'vcr',                '~> 2.9'
