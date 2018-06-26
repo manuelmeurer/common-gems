@@ -87,6 +87,7 @@ group :development do
   gem 'derailed_benchmarks',                '~> 0.0'
   gem 'guard',                              '~> 2.12'
   gem 'marginalia',                         '~> 1.4'
+  gem 'rails_db',                           @rails_major_version > 4 ? '~> 2.0' : '~> 1.6'
 
   if @rails_major_version <= 4
     gem 'quiet_assets',                     '~> 1.0'
