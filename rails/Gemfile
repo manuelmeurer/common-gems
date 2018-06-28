@@ -4,10 +4,10 @@ raise 'Rails dependency not found, please define before loading common gems.' if
 if rails.source.is_a?(Bundler::Source::Git)
   git_source, git_branch = rails.source.options.fetch_values('git', 'branch')
   unless git_source == GIT_SOURCE_RAILS
-    fail "Expected Git source for Rails to be #{GIT_SOURCE_RAILS} but it's #{git_source}."
+    raise "Expected Git source for Rails to be #{GIT_SOURCE_RAILS} but it's #{git_source}."
   end
   unless branch_match = git_branch.match(/\A(\d)-(\d)-stable\z/)
-    fail "Expected Git branch for Rails to be of format x-y-stable but it's #{git_branch}."
+    raise "Expected Git branch for Rails to be of format x-y-stable but it's #{git_branch}."
   end
   @rails_major_version, @rails_minor_version = branch_match.captures.map(&:to_i)
 else
