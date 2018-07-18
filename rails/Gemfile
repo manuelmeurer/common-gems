@@ -20,9 +20,14 @@ end
 
 # Basics
 gem 'haml-rails',                           @rails_major_version == 3 ? '~> 0.4.0' : '~> 1.0'
-gem 'sass-rails',                           @rails_major_version == 3 ? '~> 3.2' : '~> 5.0'
 gem 'uglifier',                             '~> 4.1'
 gem 'jquery-rails',                         @rails_major_version >= 5 || (@rails_major_version == 4 && @rails_minor_version >= 2) ? '~> 4.1' : '~> 3.1'
+
+if @rails_major_version == 3
+  gem 'sass-rails',                         '~> 3.2'
+else
+  gem 'sassc-rails',                        '~> 1.3'
+end
 
 if @rails_major_version <= 4
   gem 'coffee-rails',                       @rails_major_version == 3 ? '~> 3.2' : '~> 4.0'
