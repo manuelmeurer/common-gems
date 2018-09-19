@@ -36,7 +36,6 @@ end
 # Utils
 gem 'pry',                                  '~> 0.10', require: false
 gem 'awesome_print',                        '~> 1.6',  require: false
-gem 'nifty_settings',                       '~> 2.0'
 gem 'tries',                                '~> 0.3'
 gem 'rack-mini-profiler',                   '~> 1.0', require: false
 gem 'whenever',                             '~> 0.9', require: false
