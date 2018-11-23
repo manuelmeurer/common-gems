@@ -2,7 +2,6 @@ group :test do
   gem 'factory_bot_rails',  '~> 4.8'
   gem 'ffaker',             '~> 2.0'
   gem 'timecop',            '~> 0.7'
-  gem 'database_rewinder',  '~> 0.2'
   gem 'vcr',                '~> 2.9'
   gem 'webmock',            '~> 3.0'
   gem 'simplecov',          '~> 0.9', require: false
