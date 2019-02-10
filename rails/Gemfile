@@ -44,7 +44,6 @@ gem 'rollbar',                              '~> 2.4'
 gem 'premailer-rails',                      '~> 1.8'
 gem 'nokogiri',                             '~> 1.6'
 gem 'has_defaults',                         '~> 0.4'
-gem 'fetchy',                               '~> 0.1', require: false
 gem 'fast_blank',                           '~> 1.0'
 gem 'oj',                                   '~> 3.0'
 gem 'bootsnap',                             '~> 1.1', require: false
