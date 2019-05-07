@@ -1,5 +1,5 @@
 group :test do
-  gem 'factory_bot_rails',  '~> 4.8'
+  gem 'factory_bot_rails',  '~> 5.0'
   gem 'ffaker',             '~> 2.0'
   gem 'timecop',            '~> 0.7'
   gem 'vcr',                '~> 2.9'
