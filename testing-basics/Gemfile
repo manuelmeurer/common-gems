@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 group :test do
+  gem 'capybara',           '~> 3.0' unless defined?(IGNORE_COMMON_GEMS) && IGNORE_COMMON_GEMS.include?('capybara')
   gem 'factory_bot_rails',  '~> 5.0'
   gem 'ffaker',             '~> 2.0'
+  gem 'selenium-webdriver', '~> 3.6' unless defined?(IGNORE_COMMON_GEMS) && IGNORE_COMMON_GEMS.include?('selenium-webdriver')
+  gem 'simplecov',          '~> 0.9', require: false
   gem 'timecop',            '~> 0.7'
   gem 'vcr',                '~> 2.9'
   gem 'webmock',            '~> 3.0'
-  gem 'simplecov',          '~> 0.9', require: false
-  gem 'capybara',           '~> 3.0' unless defined?(IGNORE_COMMON_GEMS) && IGNORE_COMMON_GEMS.include?('capybara')
-  gem 'selenium-webdriver', '~> 3.6' unless defined?(IGNORE_COMMON_GEMS) && IGNORE_COMMON_GEMS.include?('selenium-webdriver')
 end

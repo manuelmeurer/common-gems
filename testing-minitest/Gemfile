@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 group :development, :test do
-  gem 'minitest-rails',             @rails_major_version == 4 ? (@rails_minor_version == 0 ? '~> 1.0' : '~> 2.0') : '~> 3.0'
-  gem 'minitest-reporters',         '~> 1.0'
-  gem 'minitest-rails-capybara',    @rails_major_version == 4 ? { git: 'https://github.com/krautcomputing/minitest-rails-capybara.git', branch: '2.x_with_capybara_3' } : '~> 3.0'
-  gem 'minitest-focus',             '~> 1.1'
   gem 'minitest-around',            '~> 0.3'
+  gem 'minitest-focus',             '~> 1.1'
+  gem 'minitest-rails',             @rails_major_version == 4 ? (@rails_minor_version == 0 ? '~> 1.0' : '~> 2.0') : '~> 3.0'
+  gem 'minitest-rails-capybara',    @rails_major_version == 4 ? { git: 'https://github.com/krautcomputing/minitest-rails-capybara.git', branch: '2.x_with_capybara_3' } : '~> 3.0'
+  gem 'minitest-reporters',         '~> 1.0'
 end
 
 group :development do
