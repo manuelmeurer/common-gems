@@ -42,7 +42,7 @@ gem 'rack-mini-profiler',                   '~> 1.0', require: false
 gem 'rollbar',                              '~> 2.4'
 gem 'strip_attributes',                     '~> 1.8', require: false
 gem 'tries',                                '~> 0.3'
-gem 'whenever',                             '~> 0.9', require: false
+gem 'whenever',                             '~> 1.0', require: false
 
 if @rails_major_version >= 5
   gem 'active_record_extended',             '~> 1.0'
