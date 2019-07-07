@@ -46,7 +46,7 @@ gem 'whenever',                             '~> 1.0', require: false
 
 if @rails_major_version >= 5
   gem 'active_record_extended',             '~> 1.0'
-  gem 'webpacker',                          '~> 3.0'
+  gem 'webpacker',                          '~> 4.0'
 end
 
 if @rails_major_version >= 4
