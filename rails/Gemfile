@@ -43,33 +43,28 @@ gem 'strip_attributes',                     '~> 1.8', require: false
 gem 'tries',                                '~> 0.3'
 gem 'whenever',                             '~> 1.0', require: false
 
-if @rails_major_version >= 5
-  gem 'active_record_extended',             '~> 1.0'
-  gem 'webpacker',                          '~> 4.0'
-end
-
-if @rails_major_version >= 4
-  gem 'turbolinks',                         '~> 5.0'
-end
-
-if @rails_major_version >= 5 || (@rails_major_version == 4 && @rails_minor_version >= 2)
-  gem 'fix-db-schema-conflicts',            '~> 3.0'
-end
-
 # Services
 gem 'services',                             '~> 7.0'
 
 # Postgres
 gem 'pg',                                   @rails_major_version == 4 ? '~> 0.20.0' : '~> 1.0' # v1.0 is not supported in Rails < 5 and v0.21 shows annoying
                                                                                                # deprecation warnings.
-if @rails_major_version == 4
-  gem 'activerecord-collection_cache_key',  '~> 0.1'
-  gem 'postgres_ext',                       '~> 3.0'
-  gem 'jquery-rails',                       '~> 4.1'
-end
 
-if @rails_major_version == 4 && @rails_minor_version == 2
-  gem 'where-or',                           '~> 0.1'
+case
+when @rails_major_version == 4
+  gem 'activerecord-collection_cache_key',  '~> 0.1'
+  gem 'jquery-rails',                       '~> 4.1'
+  gem 'postgres_ext',                       '~> 3.0'
+  gem 'turbolinks',                         '~> 5.0'
+
+  if @rails_minor_version == 2
+    gem 'where-or',                         '~> 0.1'
+  end
+when @rails_major_version >= 5
+  gem 'active_record_extended',             '~> 1.0'
+  gem 'webpacker',                          '~> 4.0'
+when (@rails_major_version == 4 && @rails_minor_version >= 2) || @rails_major_version >= 5
+  gem 'fix-db-schema-conflicts',            '~> 3.0'
 end
 
 group :development, :test do
