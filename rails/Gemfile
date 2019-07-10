@@ -20,35 +20,29 @@ if [@rails_major_version, @rails_minor_version].include?(nil) || !expected_rails
   raise "Could not determine Rails major and/or minor version, expected both to be present and major version to be one of #{expected_rails_major_versions.to_a} but got: major version: #{@rails_major_version}, minor version: #{@rails_minor_version}"
 end
 
-# Basics
-gem 'coffee-rails',                         '~> 4.0'
-gem 'haml-rails',                           @rails_major_version == 5 && @rails_minor_version >= 1 ? '~> 2.0' : '~> 1.0'
-gem 'sassc-rails',                          '~> 2.0'
-gem 'uglifier',                             '~> 4.1'
-
-# Utils
 gem 'autoprefixer-rails',                   '~> 9.0'
 gem 'awesome_print',                        '~> 1.6',  require: false
-gem 'bootsnap',                             '~> 1.1', require: false
+gem 'bootsnap',                             '~> 1.1',  require: false
+gem 'coffee-rails',                         '~> 4.0'
 gem 'fast_blank',                           '~> 1.0'
+gem 'fix-db-schema-conflicts',              '~> 3.0'
+gem 'haml-rails',                           @rails_major_version == 5 && @rails_minor_version >= 1 ? '~> 2.0' : '~> 1.0'
 gem 'has_defaults',                         '~> 0.4'
 gem 'nokogiri',                             '~> 1.6'
 gem 'oj',                                   '~> 3.0'
+gem 'pg',                                   @rails_major_version == 4 ? '~> 0.20.0' : '~> 1.0' # v1.0 is not supported in Rails < 5 and v0.21 shows annoying deprecation warnings.
 gem 'premailer-rails',                      '~> 1.8'
 gem 'pry',                                  '~> 0.10', require: false
 gem 'rack-attack',                          '~> 6.0'
-gem 'rack-mini-profiler',                   '~> 1.0', require: false
+gem 'rack-mini-profiler',                   '~> 1.0',  require: false
 gem 'rollbar',                              '~> 2.4'
-gem 'strip_attributes',                     '~> 1.8', require: false
-gem 'tries',                                '~> 0.3'
-gem 'whenever',                             '~> 1.0', require: false
-
-# Services
+gem 'sassc-rails',                          '~> 2.0'
 gem 'services',                             '~> 7.0'
-
-# Postgres
-gem 'pg',                                   @rails_major_version == 4 ? '~> 0.20.0' : '~> 1.0' # v1.0 is not supported in Rails < 5 and v0.21 shows annoying
-                                                                                               # deprecation warnings.
+gem 'strip_attributes',                     '~> 1.8',  require: false
+gem 'tries',                                '~> 0.3'
+gem 'turbolinks',                           '~> 5.0'
+gem 'uglifier',                             '~> 4.1'
+gem 'whenever',                             '~> 1.0',  require: false
 
 case
 when @rails_major_version == 4
@@ -62,9 +56,6 @@ when @rails_major_version == 4
 when @rails_major_version >= 5
   gem 'active_record_extended',             '~> 1.0'
   gem 'webpacker',                          '~> 4.0'
-when (@rails_major_version == 4 && @rails_minor_version >= 2) || @rails_major_version >= 5
-  gem 'turbolinks',                         '~> 5.0'
-  gem 'fix-db-schema-conflicts',            '~> 3.0'
 end
 
 group :development, :test do
