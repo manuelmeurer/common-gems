@@ -55,7 +55,6 @@ when @rails_major_version == 4
   gem 'activerecord-collection_cache_key',  '~> 0.1'
   gem 'jquery-rails',                       '~> 4.1'
   gem 'postgres_ext',                       '~> 3.0'
-  gem 'turbolinks',                         '~> 5.0'
 
   if @rails_minor_version == 2
     gem 'where-or',                         '~> 0.1'
@@ -64,6 +63,7 @@ when @rails_major_version >= 5
   gem 'active_record_extended',             '~> 1.0'
   gem 'webpacker',                          '~> 4.0'
 when (@rails_major_version == 4 && @rails_minor_version >= 2) || @rails_major_version >= 5
+  gem 'turbolinks',                         '~> 5.0'
   gem 'fix-db-schema-conflicts',            '~> 3.0'
 end
 
