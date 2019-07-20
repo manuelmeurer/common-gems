@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 
 gem 'connection_pool', '~> 2.0'
-gem 'fakeredis',       '~> 0.7', require: false
 gem 'hiredis',         '~> 0.6'
 gem 'redis',           '~> 4.0'
 gem 'redis-namespace', '~> 1.6'
 
 if @rails_major_version == 4
   gem 'readthis',      '~> 2.0'
+end
+
+group :development, :test do
+  gem 'fakeredis',     '~> 0.7'
 end
