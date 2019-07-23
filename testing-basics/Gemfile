@@ -6,7 +6,7 @@ group :test do
   gem 'ffaker',             '~> 2.0'
   gem 'selenium-webdriver', '~> 3.6' unless defined?(IGNORE_COMMON_GEMS) && IGNORE_COMMON_GEMS.include?('selenium-webdriver')
   gem 'simplecov',          '~> 0.9', require: false
-  gem 'timecop',            '~> 0.7'
-  gem 'vcr',                '~> 5.0'
-  gem 'webmock',            '~> 3.0'
+  gem 'timecop',            '~> 0.7', require: false
+  gem 'vcr',                '~> 5.0', require: false
+  gem 'webmock',            '~> 3.0', require: false
 end
