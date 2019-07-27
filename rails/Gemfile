@@ -25,7 +25,6 @@ gem 'awesome_print',                        '~> 1.6',  require: false
 gem 'bootsnap',                             '~> 1.1',  require: false
 gem 'coffee-rails',                         '~> 4.0'
 gem 'fast_blank',                           '~> 1.0'
-gem 'fix-db-schema-conflicts',              '~> 3.0'
 gem 'haml-rails',                           @rails_major_version == 5 && @rails_minor_version >= 1 ? '~> 2.0' : '~> 1.0'
 gem 'has_defaults',                         '~> 0.4'
 gem 'nokogiri',                             '~> 1.6'
