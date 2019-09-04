@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 
-gem 'sidekiq',          '~> 5.0'
+gem 'sidekiq',          '~> 6.0'
 gem 'sidekiq-failures', '~> 1.0'
