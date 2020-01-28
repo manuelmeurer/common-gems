@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 group :development, :test do
-  gem 'rspec-rails', '4.0.0.beta3' # TODO: Update to 4.x when released.
+  gem 'rspec-rails', '4.0.0.beta4' # TODO: Update to 4.x when released.
 end
 
 group :development do
