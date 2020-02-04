@@ -7,7 +7,7 @@ Just some common gems I use in every Ruby project.
 First add common-gems as a Git submodule to your project:
 
 ```
-git submodule add https://github.com/krautcomputing/common-gems.git
+git submodule add https://github.com/manuelmeurer/common-gems.git
 ```
 
 then you can load the included Gemfiles.
