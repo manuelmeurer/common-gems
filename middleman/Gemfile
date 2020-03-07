@@ -15,7 +15,7 @@ gem 'middleman-blog',               @middleman_major_version == 3 ?
                                     '~> 4.0'
 gem 'middleman-bootstrap-navbar',   '~> 4.0'
 gem 'middleman-cdn',                '~> 0.2'
-gem 'middleman-imageoptim',         git: 'https://github.com/krautcomputing/middleman-imageoptim.git', branch: 'improvements'
+gem 'middleman-imageoptim',         git: 'https://github.com/manuelmeurer/middleman-imageoptim.git', branch: 'improvements'
 gem 'middleman-livereload',         '~> 3.4'
 gem 'middleman-s3_sync',            @middleman_major_version == 3 ?
                                     '~> 3.3' :
