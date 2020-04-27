@@ -53,7 +53,7 @@ when @rails_major_version == 4
   end
 when @rails_major_version >= 5
   gem 'active_record_extended',             '~> 1.0'
-  gem 'webpacker',                          '~> 4.0'
+  gem 'webpacker',                          '~> 5.0'
 end
 
 group :development, :test do
