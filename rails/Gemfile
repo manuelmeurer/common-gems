@@ -62,7 +62,7 @@ end
 
 group :development do
   gem 'annotate',                           '~> 3.0', require: false
-  gem 'better_errors',                      '~> 2.0'
+  gem 'better_errors',                      '2.6.0' # TODO: Upgrade when error is fixed: https://github.com/BetterErrors/better_errors/issues/462
   gem 'binding_of_caller',                  '~> 0.7'
   gem 'derailed_benchmarks',                '~> 1.3'
   gem 'guard',                              '~> 2.12'
