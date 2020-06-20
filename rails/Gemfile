@@ -24,7 +24,7 @@ gem 'autoprefixer-rails',                   '~> 9.0'
 gem 'amazing_print',                        '~> 1.0', require: false
 gem 'bootsnap',                             '~> 1.1', require: false
 gem 'fast_blank',                           '~> 1.0'
-gem 'haml-rails',                           @rails_major_version == 5 && @rails_minor_version >= 1 ? '~> 2.0' : '~> 1.0'
+gem 'haml-rails',                           '~> 2.0'
 gem 'has_defaults',                         '~> 0.4'
 gem 'nokogiri',                             '~> 1.6'
 gem 'oj',                                   '~> 3.0'
