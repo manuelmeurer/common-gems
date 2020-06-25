@@ -1,9 +1,21 @@
 # frozen_string_literal: true
 
 group :development, :test do
-  gem 'rspec-rails', '4.0'
+  {
+    'rspec-rails' => ['~> 4.0']
+  }.each do |gem_name, requirements_and_options|
+    unless dependencies.any? { _1.name == gem_name }
+      gem gem_name, *requirements_and_options
+    end
+  end
 end
 
 group :development do
-  gem 'guard-rspec', '~> 4.2', require: false
+  {
+    'guard-rspec' => ['~> 4.2', require: false]
+  }.each do |gem_name, requirements_and_options|
+    unless dependencies.any? { _1.name == gem_name }
+      gem gem_name, *requirements_and_options
+    end
+  end
 end

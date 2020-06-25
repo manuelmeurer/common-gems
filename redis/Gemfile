@@ -1,14 +1,22 @@
 # frozen_string_literal: true
 
-gem 'connection_pool', '~> 2.0'
-gem 'hiredis',         '~> 0.6'
-gem 'redis',           '~> 4.0'
-gem 'redis-namespace', '~> 1.6'
-
-if @rails_major_version == 4
-  gem 'readthis', '~> 2.0'
+{
+  'connection_pool' => ['~> 2.0'],
+  'hiredis'         => ['~> 0.6'],
+  'redis'           => ['~> 4.0'],
+  'redis-namespace' => ['~> 1.6']
+}.each do |gem_name, requirements_and_options|
+  unless dependencies.any? { _1.name == gem_name }
+    gem gem_name, *requirements_and_options
+  end
 end
 
 group :test do
-  gem 'fakeredis', '~> 0.7'
+  {
+    'fakeredis' => ['~> 0.7']
+  }.each do |gem_name, requirements_and_options|
+    unless dependencies.any? { _1.name == gem_name }
+      gem gem_name, *requirements_and_options
+    end
+  end
 end

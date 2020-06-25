@@ -15,20 +15,21 @@ if rails.source.is_a?(Bundler::Source::Git)
 else
   @rails_major_version, @rails_minor_version = rails.requirement.to_s.scan(/\d+/).take(2).map(&:to_i)
 end
-expected_rails_major_versions = 4..6
+expected_rails_major_versions = 5..6
 if [@rails_major_version, @rails_minor_version].include?(nil) || !expected_rails_major_versions.include?(@rails_major_version)
   raise "Could not determine Rails major and/or minor version, expected both to be present and major version to be one of #{expected_rails_major_versions.to_a} but got: major version: #{@rails_major_version}, minor version: #{@rails_minor_version}"
 end
 
-gem 'autoprefixer-rails',                   '~> 9.0'
+gem 'active_record_extended',               '~> 1.0'
 gem 'amazing_print',                        '~> 1.0', require: false
+gem 'autoprefixer-rails',                   '~> 9.0'
 gem 'bootsnap',                             '~> 1.1', require: false
 gem 'fast_blank',                           '~> 1.0'
 gem 'haml-rails',                           '~> 2.0'
 gem 'has_defaults',                         '~> 0.4'
 gem 'nokogiri',                             '~> 1.6'
 gem 'oj',                                   '~> 3.0'
-gem 'pg',                                   @rails_major_version == 4 ? '~> 0.20.0' : '~> 1.0' # v1.0 is not supported in Rails < 5 and v0.21 shows annoying deprecation warnings.
+gem 'pg',                                   '~> 1.0'
 gem 'premailer-rails',                      '~> 1.8'
 gem 'pry',                                  '~> 0.10', require: false
 gem 'rack-attack',                          '~> 6.0'
@@ -40,21 +41,8 @@ gem 'strip_attributes',                     '~> 1.8', require: false
 gem 'tries',                                '~> 0.3'
 gem 'turbolinks',                           '~> 5.0'
 gem 'uglifier',                             '~> 4.1'
+gem 'webpacker',                            '~> 5.0'
 gem 'whenever',                             '~> 1.0', require: false
-
-case
-when @rails_major_version == 4
-  gem 'activerecord-collection_cache_key',  '~> 0.1'
-  gem 'jquery-rails',                       '~> 4.1'
-  gem 'postgres_ext',                       '~> 3.0'
-
-  if @rails_minor_version == 2
-    gem 'where-or',                         '~> 0.1'
-  end
-when @rails_major_version >= 5
-  gem 'active_record_extended',             '~> 1.0'
-  gem 'webpacker',                          '~> 5.0'
-end
 
 group :development, :test do
   gem 'byebug',                             '~> 11.0'
@@ -68,10 +56,6 @@ group :development do
   gem 'guard',                              '~> 2.12'
   gem 'letter_opener',                      '~> 1.2'
   gem 'marginalia',                         '~> 1.4'
-
-  if @rails_major_version == 4
-    gem 'quiet_assets',                     '~> 1.0'
-  end
 end
 
 group :production do

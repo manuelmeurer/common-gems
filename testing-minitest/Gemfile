@@ -1,13 +1,25 @@
 # frozen_string_literal: true
 
 group :development, :test do
-  gem 'minitest-around',            '~> 0.3'
-  gem 'minitest-focus',             '~> 1.1'
-  gem 'minitest-rails',             @rails_major_version == 4 ? (@rails_minor_version == 0 ? '~> 1.0' : '~> 2.0') : '~> 3.0'
-  gem 'minitest-rails-capybara',    @rails_major_version == 4 ? { git: 'https://github.com/manuelmeurer/minitest-rails-capybara.git', branch: '2.x_with_capybara_3' } : '~> 3.0'
-  gem 'minitest-reporters',         '~> 1.0'
+  {
+    'minitest-around'            => ['~> 0.3'],
+    'minitest-focus'             => ['~> 1.1'],
+    'minitest-rails'             => ['~> 3.0'],
+    'minitest-rails-capybara'    => ['~> 3.0'],
+    'minitest-reporters'         => ['~> 1.0']
+  }.each do |gem_name, requirements_and_options|
+    unless dependencies.any? { _1.name == gem_name }
+      gem gem_name, *requirements_and_options
+    end
+  end
 end
 
 group :development do
-  gem 'guard-minitest',             '~> 2.4'
+  {
+    'minitest-around' => ['~> 0.3'],
+  }.each do |gem_name, requirements_and_options|
+    unless dependencies.any? { _1.name == gem_name }
+      gem gem_name, *requirements_and_options
+    end
+  end
 end

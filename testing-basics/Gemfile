@@ -1,11 +1,17 @@
 # frozen_string_literal: true
 
 group :test do
-  gem 'capybara',           '~> 3.0' unless defined?(IGNORE_COMMON_GEMS) && IGNORE_COMMON_GEMS.include?('capybara')
-  gem 'factory_bot_rails',  '~> 5.0'
-  gem 'ffaker',             '~> 2.0'
-  gem 'webdrivers',         '~> 4.0' unless defined?(IGNORE_COMMON_GEMS) && IGNORE_COMMON_GEMS.include?('webdrivers')
-  gem 'simplecov',          '~> 0.9', require: false
-  gem 'vcr',                '~> 5.0', require: false
-  gem 'webmock',            '~> 3.0', require: false
+  {
+    'capybara'          => ['~> 3.0'],
+    'factory_bot_rails' => ['~> 5.0'],
+    'ffaker'            => ['~> 2.0'],
+    'webdrivers'        => ['~> 4.0'],
+    'simplecov'         => ['~> 0.9', require: false],
+    'vcr'               => ['~> 5.0', require: false],
+    'webmock'           => ['~> 3.0', require: false]
+  }.each do |gem_name, requirements_and_options|
+    unless dependencies.any? { _1.name == gem_name }
+      gem gem_name, *requirements_and_options
+    end
+  end
 end
