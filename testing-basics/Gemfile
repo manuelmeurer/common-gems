@@ -3,7 +3,7 @@
 group :test do
   {
     'capybara'          => ['~> 3.0'],
-    'factory_bot_rails' => ['~> 5.0'],
+    'factory_bot_rails' => ['~> 6.1'],
     'ffaker'            => ['~> 2.0'],
     'webdrivers'        => ['~> 4.0']
   }.each do |gem_name, requirements_and_options|
