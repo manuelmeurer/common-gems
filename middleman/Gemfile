@@ -8,24 +8,16 @@ if [@middleman_major_version, @middleman_minor_version].include?(nil) || ![3, 4]
 end
 
 gem 'bootstrap-sass',               '~> 3.3', require: false
-gem 'builder',                      '~> 3.2'
 gem 'middleman-autoprefixer',       '~> 2.7'
-gem 'middleman-blog',               @middleman_major_version == 3 ?
-                                    { git: 'https://github.com/middleman/middleman-blog.git', branch: 'v3-stable' } : # TODO: Use >= 3.6 when released
-                                    '~> 4.0'
+gem 'middleman-blog',               '~> 4.0'
 gem 'middleman-bootstrap-navbar',   '~> 4.0'
 gem 'middleman-cdn',                '~> 0.2'
 gem 'middleman-imageoptim',         git: 'https://github.com/manuelmeurer/middleman-imageoptim.git', branch: 'improvements'
 gem 'middleman-livereload',         '~> 3.4'
-gem 'middleman-s3_sync',            @middleman_major_version == 3 ?
-                                    '~> 3.3' :
-                                    { git: 'https://github.com/fredjean/middleman-s3_sync.git' } # TODO: Use >= 4.0.3 when released
-gem 'middleman-sitemap-ping',       @middleman_major_version == 3 ? '~> 0.2' : '~> 1.0'
+gem 'middleman-s3_sync',            '~> 4.0'
+gem 'middleman-sitemap-ping',       '~> 1.0'
+gem 'middleman-sprockets',          '~> 4.1'
 gem 'redcarpet',                    '~> 3.3'
+gem 'sass'                                 # Sass needs to be loaded before sass-globbing
+gem 'sass-globbing',                '~> 1.1'
 gem 'turbolinks',                   '~> 5.1', require: false
-
-if @middleman_major_version == 4
-  gem 'middleman-sprockets',        '~> 4.1'
-  gem 'sass'                                 # Sass needs to be loaded before sass-globbing
-  gem 'sass-globbing',              '~> 1.1'
-end
