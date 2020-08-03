@@ -8,7 +8,7 @@ group :development, :test do
     'minitest-rails-capybara'    => ['~> 3.0'],
     'minitest-reporters'         => ['~> 1.0']
   }.each do |gem_name, requirements_and_options|
-    unless dependencies.any? { _1.name == gem_name }
+    unless dependencies.any? { |dependency| dependency.name == gem_name }
       gem gem_name, *requirements_and_options
     end
   end
@@ -18,7 +18,7 @@ group :development do
   {
     'minitest-around' => ['~> 0.3'],
   }.each do |gem_name, requirements_and_options|
-    unless dependencies.any? { _1.name == gem_name }
+    unless dependencies.any? { |dependency| dependency.name == gem_name }
       gem gem_name, *requirements_and_options
     end
   end

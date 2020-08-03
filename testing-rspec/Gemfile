@@ -4,7 +4,7 @@ group :development, :test do
   {
     'rspec-rails' => ['~> 4.0']
   }.each do |gem_name, requirements_and_options|
-    unless dependencies.any? { _1.name == gem_name }
+    unless dependencies.any? { |dependency| dependency.name == gem_name }
       gem gem_name, *requirements_and_options
     end
   end
@@ -14,7 +14,7 @@ group :development do
   {
     'guard-rspec' => ['~> 4.2', require: false]
   }.each do |gem_name, requirements_and_options|
-    unless dependencies.any? { _1.name == gem_name }
+    unless dependencies.any? { |dependency| dependency.name == gem_name }
       gem gem_name, *requirements_and_options
     end
   end
