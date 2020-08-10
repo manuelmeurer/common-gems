@@ -22,7 +22,6 @@ end
 
 gem 'active_record_extended',               '~> 1.0'
 gem 'amazing_print',                        '~> 1.0', require: false
-gem 'autoprefixer-rails',                   '~> 9.0'
 gem 'bootsnap',                             '~> 1.1', require: false
 gem 'fast_blank',                           '~> 1.0'
 gem 'haml-rails',                           '~> 2.0'
