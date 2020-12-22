@@ -20,7 +20,7 @@ if [@rails_major_version, @rails_minor_version].include?(nil) || !expected_rails
   raise "Could not determine Rails major and/or minor version, expected both to be present and major version to be one of #{expected_rails_major_versions.to_a} but got: major version: #{@rails_major_version}, minor version: #{@rails_minor_version}"
 end
 
-gem 'active_record_extended',               '~> 1.0'
+gem 'active_record_extended',               '~> 2.0'
 gem 'amazing_print',                        '~> 1.0', require: false
 gem 'bootsnap',                             '~> 1.1', require: false
 gem 'fast_blank',                           '~> 1.0'
