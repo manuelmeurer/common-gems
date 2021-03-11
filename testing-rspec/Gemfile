@@ -2,7 +2,7 @@
 
 group :development, :test do
   {
-    'rspec-rails' => ['~> 4.0']
+    'rspec-rails' => ['~> 5.0']
   }.each do |gem_name, requirements_and_options|
     unless dependencies.any? { |dependency| dependency.name == gem_name }
       gem gem_name, *requirements_and_options
