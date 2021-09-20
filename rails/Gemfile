@@ -35,7 +35,7 @@ gem 'rack-attack',                          '~> 6.0'
 gem 'rack-mini-profiler',                   '~> 2.0', require: false
 gem 'rollbar',                              '~> 3.0'
 gem 'sassc-rails',                          '~> 2.0'
-gem 'services',                             github: 'manuelmeurer/services'
+gem 'services',                             '~> 9.0'
 gem 'strip_attributes',                     '~> 1.8', require: false
 gem 'tries',                                '~> 0.3'
 gem 'turbolinks',                           '~> 5.0'
