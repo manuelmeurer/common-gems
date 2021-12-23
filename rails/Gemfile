@@ -37,7 +37,6 @@ gem 'sassc-rails',                          '~> 2.0'
 gem 'services',                             '~> 9.0'
 gem 'strip_attributes',                     '~> 1.8', require: false
 gem 'tries',                                '~> 0.3'
-gem 'turbolinks',                           '~> 5.0'
 gem 'uglifier',                             '~> 4.1'
 gem 'webpacker',                            '~> 5.0'
 gem 'whenever',                             '~> 1.0', require: false
