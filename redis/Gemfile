@@ -13,7 +13,7 @@ end
 
 group :test do
   {
-    'fakeredis' => ['~> 0.7']
+    'mock_redis' => ['~> 0.30']
   }.each do |gem_name, requirements_and_options|
     unless dependencies.any? { |dependency| dependency.name == gem_name }
       gem gem_name, *requirements_and_options
