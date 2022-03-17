@@ -31,7 +31,7 @@ gem 'pg',                                   '~> 1.0'
 gem 'premailer-rails',                      '~> 1.8'
 gem 'pry',                                  '~> 0.10', require: false
 gem 'rack-attack',                          '~> 6.0'
-gem 'rack-mini-profiler',                   '~> 2.0', require: false
+gem 'rack-mini-profiler',                   '~> 3.0', require: false
 gem 'rollbar',                              '~> 3.0'
 gem 'sassc-rails',                          '~> 2.0'
 gem 'services',                             '~> 9.0'
