@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 {
-  'sidekiq'          => ['~> 5.0'],
+  'sidekiq'          => ['~> 6.0'],
   'sidekiq-failures' => ['~> 1.0']
 }.each do |gem_name, requirements_and_options|
   unless dependencies.any? { |dependency| dependency.name == gem_name }
