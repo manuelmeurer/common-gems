@@ -55,6 +55,6 @@ group :development do
 end
 
 group :production do
-  gem 'lograge',                            '~> 0.3', require: false
+  gem 'lograge',                            '~> 0.3'
   gem 'puma',                               '~> 5.0', require: false
 end
