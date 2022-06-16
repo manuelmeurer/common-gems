@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 {
-  'connection_pool' => ['~> 2.0'],
   'hiredis'         => ['~> 0.6'],
   'redis'           => ['~> 4.0'],
   'redis-namespace' => ['~> 1.6']
